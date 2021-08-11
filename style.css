@@ -1,0 +1,14 @@
+.sc-connectAccounts {
+	display: flex;
+	overflow-x: auto;
+}
+
+.sc-connection {
+	display: flex;
+}
+
+.sc-connection .connectedAccountNameInner-2q3MVf {
+	margin-left: -18px;
+	margin-bottom: 2px;
+	align-items: flex-end;
+}
