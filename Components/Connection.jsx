@@ -17,8 +17,8 @@ module.exports = ({ account }) => {
 		<TooltipContainer className='sc-connection scrollbarGhostHairline-1mSOM1' text={account.name}>
 			<a target='_blank' href={connection.getPlatformUserUrl?.(account)}>
 				<img alt={Messages.IMG_ALT_LOGO.format({ name: connection?.name })} className={classes.connectedAccountIcon} src={connection?.icon?.color} />
+				<div className={classes.connectedAccountNameInner}>{account.verified && <Verified className={classes.connectedAccountVerifiedIcon} />}</div>
 			</a>
-			<div className={classes.connectedAccountNameInner}>{account.verified && <Verified className={classes.connectedAccountVerifiedIcon} />}</div>
 		</TooltipContainer>
 	);
 };
