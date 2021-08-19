@@ -11,8 +11,8 @@ const Verified = require('./Verified');
 const classes = getModule(['connectedAccount'], false);
 const { get } = getModule(['get', 'isSupported'], false);
 
-module.exports = ({ account }) => {
-	const connection = get(account.type);
+module.exports = ({ account, pork }) => {
+	const connection = pork ? powercord.api.connections.get(account.type) : get(account.type);
 	return (
 		<TooltipContainer className='sc-connection scrollbarGhostHairline-1mSOM1' text={account.name}>
 			<a target='_blank' href={connection.getPlatformUserUrl?.(account)}>
