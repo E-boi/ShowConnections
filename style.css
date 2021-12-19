@@ -2,6 +2,7 @@
 	display: flex;
 	overflow-x: auto;
 	margin-bottom: 11px;
+	margin-top: 30px;
 }
 
 .sc-connection {
