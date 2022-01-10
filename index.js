@@ -8,10 +8,10 @@ module.exports = class ShowConnection extends Plugin {
 		this.loadStylesheet('style.css');
 		const Popout = getModule(m => m.default?.displayName === 'UserPopoutBody', false);
 
-		inject('sc-injection', Popout, 'default', ([{ user }], res) => {
-			res.props.children.splice(2, 0, React.createElement(Connections, { user: user.id }));
-			return res;
-		});
+		// inject('sc-injection', Popout, 'default', ([{ user }], res) => {
+		// 	res.props.children.splice(2, 0, React.createElement(Connections, { user: user.id }));
+		// 	return res;
+		// });
 
 		Popout.default.displayName = 'UserPopoutBody';
 	}
