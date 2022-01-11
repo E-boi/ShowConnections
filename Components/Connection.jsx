@@ -8,10 +8,10 @@ const { TooltipContainer } = getModule(m => m.TooltipContainer, false);
 
 const Verified = require('./Verified');
 
-const classes = getModule(['connectedAccount'], false);
 const { get } = getModule(['get', 'isSupported'], false);
 
 module.exports = ({ account, pork }) => {
+	const classes = getModule(['connectedAccount'], false);
 	const connection = pork ? powercord.api.connections.get(account.type) : get(account.type);
 	return (
 		<TooltipContainer className='sc-connection scrollbarGhostHairline-1mSOM1' text={account.name}>
