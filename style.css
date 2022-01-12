@@ -2,10 +2,12 @@
   display: flex;
   overflow-x: auto;
   margin-bottom: 11px;
+  padding-bottom: 4px;
 }
 
 .sc-connection {
   display: flex;
+  position: relative;
 }
 
 .sc-connection a {
@@ -17,4 +19,10 @@
 .sc-connection .connectedAccountNameInner-2q3MVf {
   margin-left: -18px;
   align-items: flex-end;
+}
+
+.flowerStarContainer-1QeD-L {
+	position: absolute;
+	right: -4px;
+	bottom: -4px;
 }
