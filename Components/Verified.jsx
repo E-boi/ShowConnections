@@ -18,8 +18,9 @@ setImmediate(async () => {
 	classes = { ...(await getModule(['flowerStarContainer', 'flowerStar'])) };
 });
 
-class Verified extends React.Component {
+module.exports = class Verified extends React.Component {
 	render() {
+		const lightTheme = document.body.parentElement.classList.contains('theme-light');
 		return (
 			<>
 				<TooltipContainer element='span' text={Messages.CONNECTION_VERIFIED}>
@@ -30,13 +31,13 @@ class Verified extends React.Component {
 							height: 16,
 						}}
 					>
-						<FlowerStarIcon className={classes.flowerStar} color={this.props.theme === 'light' ? Colors.STATUS_GREY_200 : Colors.PRIMARY_DARK} />
+						<FlowerStarIcon className={classes.flowerStar} color={lightTheme ? Colors.STATUS_GREY_200 : Colors.PRIMARY_DARK} />
 
 						<div className={classes.childContainer}>
 							<svg width={16} height={16} viewBox='0 0 16 15.2'>
 								<path
 									d='M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z'
-									fill={this.props.theme === 'light' ? Colors.STATUS_GREY_500 : Colors.WHITE}
+									fill={lightTheme ? Colors.STATUS_GREY_500 : Colors.WHITE}
 								/>
 							</svg>
 						</div>
@@ -46,5 +47,3 @@ class Verified extends React.Component {
 		);
 	}
 }
-
-module.exports = Flux.connectStoresAsync([getModule(['theme', 'locale'])], ([settingsStore]) => ({ theme: settingsStore.theme }))(Verified);
