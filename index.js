@@ -5,15 +5,6 @@ const Connections = require('./Components/Connections');
 
 module.exports = class ShowConnection extends Plugin {
 	startPlugin() {
-		// e
-		window.webpackChunkdiscord_app.push([
-			[Math.random().toString(36)],
-			{},
-			e => {
-				e(868950);
-			},
-		]);
-
 		this.loadStylesheet('style.css');
 		const Popout = getModule(m => m.default?.displayName === 'UserPopoutBody', false);
 
